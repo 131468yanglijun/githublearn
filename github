@@ -1,0 +1,90 @@
+github 学习笔记
+
+
+1：创建版本库
+mkdir test
+cd test
+pwd(显示当前目录)
+
+2：建立空仓库 把这个目录变成Git可以管理的仓库 git init
+
+3：查看.git 目录
+ls -ah
+
+4：关联一个远程库
+git remote add origin git@server-name:path/repo-name.git；
+或者
+git remote origin https://github.com/131468yanglijun/aa.git
+
+5：撤销上一步操作(在git add之前进行)
+git checkout -- aa.php 
+
+6：从版本库彻底删除文件
+rm aa.php
+git commit -m 'aa.php'
+
+7:误删文件，进行恢复
+rm aa.php
+git checkout -- 'aa.php'
+
+8:把文件添加到仓库
+git add readme.txt
+
+9:把文件提交到仓库
+git commit -m 'change 1'
+
+10:查看仓库的状态
+git statusl
+
+11:查看仓库的差异
+git diff
+
+12:文件提交到仓库
+git push origin master
+
+13:查看所有分支
+git branch
+
+14:切换分支
+git checkout 分支名称
+
+15:创建并切换分支
+git checkout -b 分支名称 
+
+16：合并分支
+git merge 分支名称
+或者
+git merge --no-ff -m "merge with no-ff" 分支名称
+
+17：删除分支
+git branch -d 分支名称
+
+18：查看分支合并图
+git log --graph
+
+19：查看远程库的信息
+git remote
+或者
+git remote -v 查看详细信息
+
+20：创建密钥
+～/.ssh 进入目录下
+里面有id_rsa和id_rsa.pub两个文件
+用：ssh-keygen -t rsa -C "youremail@example.com"来创建密钥
+创建完在id_rsa.pub下
+然后cat id_rsa.pub 把这个密钥粘贴到gitbub下setting SSH Key那里
+
+21：从仓库里克隆项目到本地
+git clone https@github.com:131468yanglijun/hello.git
+或者
+git clone git@github.com:131468yanglijun/hello.git
+
+
+
+
+
+
+
+
+
+
